@@ -260,7 +260,7 @@ while (true) {
 
 function echoAndLog(string $content)
 {
-	$date = date('H:i');
+	$date = date('d-M-Y H:i');
 	$content = "$date: $content\n";
 	echo $content;
 	file_put_contents('./log.txt', $content, FILE_APPEND);
