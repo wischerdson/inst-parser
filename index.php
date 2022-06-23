@@ -6,6 +6,7 @@ use Illuminate\Database\Capsule\Manager as Capsule;
 use GuzzleHttp\Client;
 
 date_default_timezone_set('Europe/Moscow');
+register_shutdown_function(fn () => exit());
 
 class Config
 {
@@ -142,7 +143,7 @@ class InstagramClient
 class Instagram
 {
 	private string $rawHeaders = <<<'EOD'
-		User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/20100101 Firefox/100.0
+		User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:101.0) Gecko/20100101 Firefox/101.0
 		X-Instagram-AJAX: 72b68f0470c8
 		X-IG-App-ID: 936619743392459
 		X-ASBD-ID: 198387
